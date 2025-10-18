@@ -2,6 +2,37 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Getting Started
+
+To get the project up and running, you'll need to set up your environment variables.
+
+1.  **Create a `.env` file:**
+
+    Copy the example environment file to a new file named `.env`:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+2.  **Get your API Key:**
+
+    You'll need a Google Generative AI API key. You can get one from [Google AI Studio](https://aistudio.google.com/app/apikey).
+
+3.  **Set your API Key:**
+
+    Open the `.env` file and replace `YOUR_API_KEY_HERE` with your actual API key:
+
+    ```
+    VITE_API_KEY=your-actual-api-key
+    ```
+
+4.  **Install dependencies and run the project:**
+
+    ```bash
+    npm install
+    npm run dev
+    ```
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh

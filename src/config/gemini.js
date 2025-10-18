@@ -1,11 +1,12 @@
 //abdullah and donot copy my apikey and i will soon update my code and hide the api  by the help of the environmental varibles
 import {
     GoogleGenerativeAI,
-    HarmCategory,
-    HarmBlockThreshold,
   } from "@google/generative-ai";
 
    const apiKey = import.meta.env.VITE_API_KEY;
+   if (!apiKey) {
+    throw new Error("VITE_API_KEY is not defined. Please set it in your .env file.");
+  }
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
