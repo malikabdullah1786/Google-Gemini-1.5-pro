@@ -1,11 +1,9 @@
 //abdullah
 import { createContext, useState } from "react";
 import runChat from "../config/gemini";
-import PropTypes from "prop-types";
 
 export const Context = createContext();
 
-// TODO: Move ContextProvider to a separate file to address the fast-refresh warning.
 const ContextProvider = (props) => {
     const [input, setInput] = useState("");
     const [recentPrompt, setRecentPrompt] = useState("");
@@ -90,10 +88,6 @@ const ContextProvider = (props) => {
             {props.children}
         </Context.Provider>
     );
-};
-
-ContextProvider.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default ContextProvider;
